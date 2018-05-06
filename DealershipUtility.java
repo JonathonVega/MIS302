@@ -23,7 +23,7 @@ public class DealershipUtility {
             case 2:
                break;
             case 3:
-               //calculateTotalSale();
+               calculateTotalSale();
                break;
             case 4:
                System.out.println("Exiting system");
@@ -45,17 +45,23 @@ public class DealershipUtility {
    
    }
    
-   public void calculateTotalSale(){
+   // Third Process
+   public static void calculateTotalSale(){
       Scanner input = new Scanner(System.in);
       double totalSale = 0;
       double saleAmount = 0;
+      System.out.print("Type -1 to end process.\nInput the first sale amount:");
       while ( saleAmount != -1 ) {
-         System.out.println("Input the sale amount? type -1 to stop ");
+         
          saleAmount = input.nextDouble();
-         totalSale += saleAmount;
-       
+         if(saleAmount == -1) {
+            break;
+         } else {
+            totalSale += saleAmount;
+         }
+         System.out.print("Type -1 to end!\nInput the next sale amount:");
       }
-      System.out.println("Total Amount is $" + totalSale);   
+      System.out.println("Total Amount is $" + totalSale + "!\n");   
    }
    
    
