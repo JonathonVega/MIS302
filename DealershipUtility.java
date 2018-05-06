@@ -1,5 +1,5 @@
 /*5/2/2018
-**Jonathon Vega
+**Jonathon Vega, Phat Le, Alexander Battle, Hailey Quigley
 **MIS302 Final Project
 **
 */
