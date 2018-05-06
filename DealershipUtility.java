@@ -44,6 +44,48 @@ public class DealershipUtility {
    public void loanCalc(int autoPrice) {
    
    }
+   // Process Two: Salesmen Standing
+   public void salesmanStanding(){
+      Scanner input = new Scanner(System.in);
+      Scanner salesmanSales = new Scanner(System.in);
+      
+      
+     
+      
+      //input how many sales they entering
+      System.out.println("How many salesmen are there?");
+      int totalsalesmen = input.nextInt();
+       
+      //array
+      Salesman[] salesmenArray = new Salesman [totalsalesmen];
+      
+      //compares salesman totals
+      for(int i = 0; i < totalsalesmen; i++){
+         System.out.println("Please enter the amount of sales for Salesmen" + (i+1) + ":");
+         double sale = salesmanSales.nextDouble();
+         String salesmanName = "salesman" + (i+1);
+         salesmenArray[i] = new Salesman(sale, salesmanName);   
+      }
+      
+      Salesman bestSalesman = getBestSalesman(salesmenArray);
+      
+      System.out.println("The best salesman for the month is " + bestSalesman.name + " leading with " +bestSalesman.sales);
+    
+    }
+   
+    public static Salesman getBestSalesman(Salesman [] salesmenArray){
+         Salesman bestSalesman = new Salesman(0, "emptySalesman");
+         double maxSale = 0;
+         for(Salesman salesman : salesmenArray){
+           if(salesman.sales > maxSale){
+             bestSalesman = salesman;
+             maxSale = salesman.sales;
+          
+           }
+         }
+         return bestSalesman;    
+      }
+
    
    // Third Process
    public static void calculateTotalSale(){
