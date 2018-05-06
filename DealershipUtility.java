@@ -46,7 +46,16 @@ public class DealershipUtility {
    }
    
    public void calculateTotalSale(){
-   
+      Scanner input = new Scanner(System.in);
+      double totalSale = 0;
+      double saleAmount = 0;
+      while ( saleAmount != -1 ) {
+         System.out.println("Input the sale amount? type -1 to stop ");
+         saleAmount = input.nextDouble();
+         totalSale += saleAmount;
+       
+      }
+      System.out.println("Total Amount is $" + totalSale);   
    }
    
    
