@@ -1,7 +1,8 @@
-/*5/2/2018
+/*5/9/2018
 **Jonathon Vega, Phat Le, Alexander Battle, Hailey Quigley
 **MIS302 Final Project
-**
+**This is a program that will help in creating order summaries while keeping up with salesman standings and sales as well as the
+**total sales of the dealership
 */
 
 import java.util.Scanner;
