@@ -146,12 +146,16 @@ public class DealershipUtility {
       System.out.print("Enter the down payment :$");
       double downPayment = input.nextDouble();
       double loanAmount = afterTaxPrice - downPayment;
-      System.out.print("Enter APR %");
-      double aPR = input.nextDouble();
-      double periodRate = (aPR / 100) / 12;
-      System.out.print("Enter loan term in year ");
-      int loanTerm = input.nextInt();
-      int totalNumberOfPayments = loanTerm * 12 ;
+      double periodRate;
+      if(loanAmount!=0){
+         System.out.print("Enter APR %");
+         double aPR = input.nextDouble();
+         periodRate = (aPR / 100) / 12;
+         System.out.print("Enter loan term in year ");
+         int loanTerm = input.nextInt();
+         int totalNumberOfPayments = loanTerm * 12 ;
+      }
+      Else{periodRate=0;}
       
       double periodPayment = loanAmount / discountFactor(periodRate,totalNumberOfPayments);
       System.out.println("Total amount due now is $" + downPayment);
